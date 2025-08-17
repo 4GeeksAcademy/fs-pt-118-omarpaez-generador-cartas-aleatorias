@@ -1,35 +1,56 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./assets/img/4geeks.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
 
-    <!-- Fontawesome is our recomended library for icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./assets/img/4geeks.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generador de Cartas Aleatorias</title>
+
+  <!-- Fontawesome is our recomended library for icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+</head>
+
+<body>
+  <!-- Contenedor de la carta -->
+  <div class="d-flex  flex-column">
+    <div class="container-fluid d-flex justify-content-between mb-5 w-auto">
+      <button id="btnNewCard" type="button" class="btn btn-outline-light me-2">Generar Nueva Carta</button>
+      <button id="btnTimer" type="button" class="btn btn-outline-light me-2">Activar Temporizador</button>
+      <button id="btnDimensions" type="button" class="btn btn-outline-light">Modificar Tamaño</button>
+    </div>
+    <div class="d-flex flex-column align-items-center">
+      <div id="divMsg" class="hidden alert alert-info  text-center"  role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <div id="divDimensions" class="hidden text-center mb-2 align-items-center">
+        <div class="form-floating mb-3 me-2">
+          <input id="userHeigth" type="number"  class="form-control" placeholder="600px">
+          <label for="floatingInput">Alto (px)</label>
+        </div>
+        <div class="form-floating mb-3 me-2">
+          <input id="userWidth" type="number" class="form-control" placeholder="400px">
+          <label for="floatingInput">Ancho (px)</label>
+        </div>
+        <div>
+          <button id="btnAdjust" type="button" class="btn btn-primary btn-sm">Ajustar</button>
+        </div>
+        
+        
+      </div>
+      
+      <div class="cards heart d-flex flex-column bg-white shadow-lg">
+        <div id="firtsStick" class="d-flex justify-content-start ps-2 "></div>
+        <div id="number" class="number d-flex justify-content-center"></div>
+        <div id="secondStick" class="d-flex justify-content-end pe-2"></div>
       </div>
     </div>
+  </div>
 
-    <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
-    <script type="module" src="/app.js"></script>
-  </body>
+
+  <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
+  <script type="module" src="/app.js"></script>
+</body>
+
 </html>

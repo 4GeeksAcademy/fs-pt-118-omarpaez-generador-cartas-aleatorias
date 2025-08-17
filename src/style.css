@@ -1,5 +1,78 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-body{
-    background: white;
+body {
+    background: green;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.cards{
+
+    width: 400px;     
+    height: 600px;
+    min-width: 200px;  
+    max-width: 800px;   
+    min-height: 300px;   
+    max-height: 900px;  
+    border-radius: 1.5rem;
+    font-family: "Times New Roman", "Georgia", serif;
+    font-weight: bold;
+    line-height: 1;
+    container-type: inline-size;
+    font-size: 50px; 
+}
+
+#firtsStick, #secondStick {
+   
+    font-size: 120px; /*ajusto el tamaño de las fuentes en proporcion al tamaño de la tarjeta*/
+    line-height: 1;
+    flex:1;
+    
+}
+
+
+
+.cardsNew{
+    height: 600px;
+    width: 400px; 
+    
+}
+
+
+
+.heart, .spade, .club, .diamond{
+     line-height: 1;
+    
+     
+}
+
+.heart, .diamond{
+    color: red;
+    
+}
+
+.spade, .club{
+    color: black;
+    
+}
+
+
+
+.number {
+  
+   font-size: 300px; /*ajusto el tamaño del numero en proporcion al tamaño de la tarjeta*/
+   flex:2;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: flex;
 }
